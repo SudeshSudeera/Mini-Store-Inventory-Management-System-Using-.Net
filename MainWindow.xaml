@@ -1,0 +1,38 @@
+﻿<Window x:Class="WpfApp1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Label Name="storeLabel"  Content="Stores" HorizontalAlignment="Left" Margin="6,10,0,0" VerticalAlignment="Top" FontSize="14"/>
+        <ListBox Name="storeList" SelectionChanged="storeList_SelectionChanged" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="9,41,654,228"/>
+        <Label Name="storeInvLabel" Content="Store Inventory" HorizontalAlignment="Left" Margin="168,10,0,0" VerticalAlignment="Top" FontSize="14"/>
+        <ListBox Name="storeInventory" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="172,41,484,228"/>
+        <Label Name="allProductsLabel" Content="All Products" HorizontalAlignment="Left" Margin="339,10,0,0" VerticalAlignment="Top" FontSize="14"/>
+        <ListBox Name="productList" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="343,41,314,228"/>
+        <Button Content="Add Store" HorizontalAlignment="Left" Margin="12,217,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.681,0.453" Click="AddStoreClick" Width="134" Background="White"/>
+        <Button Content="Delete Store" HorizontalAlignment="Left" Margin="10,255,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.681,0.453" Click="DeleteStoreClick" Width="136" Background="White"/>
+        <Button Content="Add Inventory" HorizontalAlignment="Left" Margin="172,217,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.681,0.453" Click="AddInventoryClick" Width="144" Background="White"/>
+        <Button Content="Delete Inventory" HorizontalAlignment="Left" Margin="172,255,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.681,0.453" Click="DeleteInventoryClick" Width="144" Background="White"/>
+        <Button Content="Add Product" HorizontalAlignment="Left" Margin="343,217,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.681,0.453" Click="AddProductClick" Width="143" Background="White"/>
+        <Button Content="Delete Product" HorizontalAlignment="Left" Margin="343,255,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.681,0.453" Click="DeleteProductClick" Width="143" Background="White"/>
+        <Label Content="Product Manufacturer" HorizontalAlignment="Left" Margin="12,323,0,0" VerticalAlignment="Top" FontSize="13"/>
+        <TextBox x:Name="prodManu" HorizontalAlignment="Left" Margin="167,325,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="223" Height="24"/>
+        <Label Content="Product Brand" HorizontalAlignment="Left" Margin="12,363,0,0" VerticalAlignment="Top" FontSize="13" Width="145"/>
+        <TextBox x:Name="prodBrand" HorizontalAlignment="Left" Margin="167,365,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="223" Height="24"/>
+        <Label Content="Store Name" HorizontalAlignment="Left" Margin="515,11,0,0" VerticalAlignment="Top" FontSize="13" Width="95"/>
+        <TextBox x:Name="storeName" HorizontalAlignment="Left" Margin="515,44,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="258" Height="24"/>
+        <Label Content="Store Street" HorizontalAlignment="Left" Margin="515,84,0,0" VerticalAlignment="Top" FontSize="13" Width="95"/>
+        <TextBox x:Name="storeStreet" HorizontalAlignment="Left" Margin="515,117,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="258" Height="24"/>
+        <Label Content="Store City" HorizontalAlignment="Left" Margin="515,161,0,0" VerticalAlignment="Top" FontSize="13" Width="95"/>
+        <TextBox x:Name="storeCity" HorizontalAlignment="Left" Margin="515,194,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="258" Height="24"/>
+        <Label Content="Store State" HorizontalAlignment="Left" Margin="515,239,0,0" VerticalAlignment="Top" FontSize="13" Width="95"/>
+        <TextBox x:Name="storeState" HorizontalAlignment="Left" Margin="515,272,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="258" Height="24"/>
+        <Label Content="Store Zipcode" HorizontalAlignment="Left" Margin="515,314,0,0" VerticalAlignment="Top" FontSize="13" Width="95"/>
+        <TextBox x:Name="storeZip" HorizontalAlignment="Left" Margin="515,347,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="258" Height="24"/>
+
+    </Grid>
+</Window>
